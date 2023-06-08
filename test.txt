@@ -1,0 +1,20 @@
+ The global $_FILES will contain all the uploaded file information. Its contents from the example form is as follows. Note that this assumes the use of the file upload name userfile, as used in the example script above. This can be any name.
+
+$_FILES['userfile']['name']
+
+    The original name of the file on the client machine.
+$_FILES['userfile']['type']
+
+    The mime type of the file, if the browser provided this information. An example would be "image/gif". This mime type is however not checked on the PHP side and therefore don't take its value for granted.
+$_FILES['userfile']['size']
+
+    The size, in bytes, of the uploaded file.
+$_FILES['userfile']['tmp_name']
+
+    The temporary filename of the file in which the uploaded file was stored on the server.
+$_FILES['userfile']['error']
+
+    The error code associated with this file upload.
+$_FILES['userfile']['full_path']
+
+    The full path as submitted by the browser. This value does not always contain a real directory structure, and cannot be trusted. Available as of PHP 8.1.0.
